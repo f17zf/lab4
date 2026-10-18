@@ -1,0 +1,205 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222222;
+  background-color: #ffffff;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+a {
+  color: #222222;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Header and footer */
+.site-header,
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background-color: #eeeeee;
+}
+
+.logo {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Main page sections */
+.container {
+  margin: 24px 0 32px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.spotlight,
+.session {
+  padding: 24px;
+  background-color: #eeeeee;
+}
+
+.spotlight h1 {
+  margin-bottom: 16px;
+}
+
+.spotlight p {
+  margin-bottom: 24px;
+}
+
+.session h2 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+
+/* Buttons */
+.button {
+  display: block;
+  padding: 12px 16px;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Workshop gallery */
+.workshops {
+  margin-top: 32px;
+}
+
+.workshops > h2 {
+  margin-bottom: 24px;
+}
+
+.cards-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: 24px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 128px;
+  margin-bottom: 16px;
+  background-color: #dddddd;
+  color: #555555;
+  border-radius: 4px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 32px;
+}
+
+.card .button {
+  margin-top: auto;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  body {
+    padding: 24px 80px 40px;
+  }
+
+  .site-header,
+  .site-footer {
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .container {
+    margin-top: 32px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .spotlight,
+  .session {
+    padding: 32px;
+  }
+
+  .spotlight h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .spotlight p,
+  .session p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .spotlight .button {
+    display: inline-block;
+  }
+
+  .session h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .workshops > h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .cards-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
